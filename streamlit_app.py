@@ -1,6 +1,7 @@
 # Import python packages
 from snowflake.snowpark.functions import col
 import streamlit as st
+import requests  
 
 # Write directly to the app
 #Title
@@ -58,6 +59,8 @@ if ingredients_list:
 
 # new section to display smotthiefroot nutrition infomration
 
-import requests  
-smoothiefroot_response = requests.get("[https://my.smoothiefroot.com/api/fruit/watermelon](https://my.smoothiefroot.com/api/fruit/watermelon)")  
+smoothiefroot_response = requests.get(
+    "https://my.smoothiefroot.com/api/fruit/watermelon"
+)
+
 st.text(smoothiefroot_response)
