@@ -1,4 +1,3 @@
-```python
 # Import python packages
 from snowflake.snowpark.functions import col
 import streamlit as st
