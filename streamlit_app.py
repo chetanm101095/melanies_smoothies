@@ -89,4 +89,3 @@ if ingredients_list:
             "Your Smoothie is ordered!",
             icon="✅"
         )
-```
