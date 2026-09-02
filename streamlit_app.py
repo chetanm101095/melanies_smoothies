@@ -63,9 +63,14 @@ if ingredients_list:
         )
 
         # Call SmoothieFroot API using SEARCH_ON
-        smoothiefroot_response = requests.get(
-            f"https://my.smoothiefroot.com/api/fruit/{search_on}"
+        smoothiefroot_response = requests.get(f"https://my.smoothiefroot.com/api/fruit/{search_on}"
         )
+        
+        st.write("Fruit:", fruit_chosen)
+        st.write("SEARCH_ON:", search_on)
+        st.write("API URL:", smoothiefroot_response.url)
+        st.write("Status Code:", smoothiefroot_response.status_code)
+        st.write("API Response:", smoothiefroot_response.text)
 
         st_df = st.dataframe(
             data=smoothiefroot_response.json(),
